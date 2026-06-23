@@ -1,1 +1,27 @@
-<html><head><title>Blog</title><link rel="stylesheet" href="style.css"></head><body><h1>Blog</h1><ul><li>Top 25 Selenium Interview Questions</li><li>Selenium Waits Explained</li></ul></body></html>
+<html><head><title>Blog</title><link rel='stylesheet' href='style.css'>
+<script>
+function searchPosts(){
+var i=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.post').forEach(p=>{
+p.style.display=p.innerText.toLowerCase().includes(i)?'block':'none';
+});
+}
+</script></head><body>
+<header>
+<div class='logo'>🧪 Gaurav Testing Hub</div>
+<p>Selenium • Java • TestNG • Cucumber • API Testing</p>
+</header>
+<nav>
+<a href='index.html'>Home</a>
+<a href='blog.html'>Blog</a>
+<a href='about.html'>About</a>
+<a href='interview.html'>Interview Questions</a>
+<a href='contact.html'>Contact</a>
+</nav>
+
+<div class='container'>
+<input id='search' onkeyup='searchPosts()' placeholder='Search articles'>
+<div class='card post'><a href='selenium-waits.html'>Selenium Waits Explained</a></div>
+<div class='card post'><a href='testng-annotations.html'>TestNG Annotations</a></div>
+<div class='card post'><a href='api-testing-basics.html'>API Testing Basics</a></div>
+</div><footer>© Gaurav Testing Hub</footer></body></html>
